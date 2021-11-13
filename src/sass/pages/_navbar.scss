@@ -1,0 +1,16 @@
+nav {
+    height: 80px;
+    @include flexBox(center, center);
+    .navbar-center {
+        width: 90vw;
+        @include flexBox(space-between, center);
+        .cart-bag {
+            cursor: pointer;
+            @include flexBox(flex-start, center);
+            .amount {
+                margin-left: 8px;
+                font-weight: 400;
+            }
+        }
+    }
+}
