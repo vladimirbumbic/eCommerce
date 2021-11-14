@@ -6,15 +6,15 @@ import { AppProvider } from './context/Context';
 import './sass/all.scss';
 
 function App() {
-  return (
-    <div>
-      <AppProvider>
-        <Navbar />
-        <Products />
-        <CartContainer />
-      </AppProvider>
-    </div>
-  );
+    return (
+        <div>
+            <AppProvider>
+                <Navbar />
+                <Products />
+                <CartContainer />
+            </AppProvider>
+        </div>
+    );
 }
 
 export default App;
