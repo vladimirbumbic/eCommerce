@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useGlobalContext } from '../context/Context';
 import ChevronDown from '../img/chevron-down-icon.svg';
 import ChevronUp from '../img/chevron-up-icon.svg';

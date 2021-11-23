@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useGlobalContext } from '../context/Context';
 import products from '../data/Data';
 

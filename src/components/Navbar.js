@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useGlobalContext } from '../context/Context';
 import Logo from '../img/logo.svg';
 import Bag from '../img/bag.svg';

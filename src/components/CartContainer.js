@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CartItem from './CartItem';
 import { useGlobalContext } from '../context/Context';
 import Logo from '../img/logo.svg';
@@ -17,7 +18,7 @@ function CartContainer() {
                         className="close-cart-btn"
                         src={CloseIcon}
                         alt="close icon"
-                        onClick={(_) => toggleOpenCloseCart('CLOSE_CART')}
+                        onClick={() => toggleOpenCloseCart('CLOSE_CART')}
                     />
                 </header>
                 <section className="cart-body">
@@ -27,8 +28,8 @@ function CartContainer() {
                 </section>
                 <footer>
                     <div className="total-price">
-                        <h4>Total:</h4>
-                        <h4>${total}</h4>
+                        <p>Total:</p>
+                        <p>${total}</p>
                     </div>
                     <button onClick={clearCart} className="btn clear-btn">
                         Clear Cart
