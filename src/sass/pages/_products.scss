@@ -1,0 +1,67 @@
+.products {
+    position: relative;
+    @include flexBox(center, center);
+    padding: 64px 0;
+    .product-center {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 16px;
+        .product {
+            header {
+                position: relative;
+                margin-bottom: 16px;
+                .btn-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    overflow: hidden;
+                    background-color: rgba(226, 226, 226, 0.92);
+                    @include flexBox(center, center);
+                    @include GenerateTransition(height);
+                    button {
+                        position: relative;
+                        font-size: 32px;
+                        font-weight: 300;
+                        color: $blackColor;
+                        padding: 7px 3px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 0;
+                            height: 3px;
+                            background-color: $blackColor;
+                            @include GenerateTransition(width);
+                        }
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                header .btn-overlay {
+                    height: 100%;
+                }
+            }
+            footer {
+                @include flexBox(space-between, center);
+                .product-info {
+                    color: $blackColor;
+                    .product-title {
+                        font-weight: 400;
+                    }
+                }
+                .product-price {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
